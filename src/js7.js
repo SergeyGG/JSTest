@@ -1,3 +1,5 @@
+// +http://lodash.com/docs#bind
+
 function bind(funct, newThis) {
     return function () {
         var args = [];
