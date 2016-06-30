@@ -1,5 +1,5 @@
 /*constants*/
-Hamburger.SIZE_SMALL = "SMALL";
+Hamburger.SIZE_SMALL = "small";
 Hamburger.SIZE_BIG = "big";
 
 Hamburger.STUFFING_CHEESE = "cheese";
@@ -51,12 +51,12 @@ Hamburger.prototype.addTopping = function(topping) {
 		throw new Error ("Нет такого топпинга!");
 	}
 
-	if (this.toppings.toppingSauce >= 2) {
+	if (this.toppings.toppingSauce > 1) {
 		this.toppings.toppingSauce = 1;
 		throw new Error ("Слишком много приправы!");
 	}
 
-	if (this.toppings.toppingMayo >= 2) {
+	if (this.toppings.toppingMayo > 1) {
 		this.toppings.toppingMayo = 1;
 		throw new Error ("Слишком много майонеза!");
 	}
