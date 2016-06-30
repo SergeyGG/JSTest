@@ -1,7 +1,6 @@
-//запуск приложения
 window.onload = init;
 function init(){
-	var findButton = document.getElementById("find-num"); //получаем ссылку на кнопку
+	var findButton = document.getElementById("find-num"); 
 	findButton.onclick = handleButton;
 }
 
@@ -19,7 +18,7 @@ function table(find){
     var template = "<tr class='about-city'><td>#number#</td><td>#cityName#</td><td>#peopleNum#</td></tr>";
     var temporaryString = '';
 
-    //проверка данных на ввод числа и на null
+    
 	if (isNaN(findNum) || find===null){
 		alert("Ошибка ввода id пользователя!");
 	} else {
@@ -37,7 +36,7 @@ function table(find){
 			myHTML = myHTML + temporaryString;
 		}
 
-		//вывод статистики
+		
 	    var myTableElement = document.getElementById('cities');
 	    var myTableBody = myTableElement.getElementsByTagName('tbody')[0];
 	    myTableBody.innerHTML = myHTML;
