@@ -1,20 +1,22 @@
 function deepCopy(obj){
-var ObjectCopy = [];
-if(obj instanceof Date){
- return new Date(obj);
-}
+ var ObjectCopy = [];
+ 
+ if (obj instanceof Date) {
+  return new Date(obj);
+ }
 
-if(obj===null){
+ if (obj===null) {
  return null;
-}
-for(var key in obj){
-if(typeof obj[key] == "object"){
- ObjectCopy[key] = deepCopy(obj[key]);
-}
-else{
-ObjectCopy[key] = obj[key];
-}
-}
+ }
+ 
+ for (var key in obj) {
+  if(typeof obj[key] == "object") {
+   ObjectCopy[key] = deepCopy(obj[key]);
+  }
+  else {
+  ObjectCopy[key] = obj[key];
+  }
+ }
 return ObjectCopy;
 }
 
