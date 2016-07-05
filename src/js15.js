@@ -1,9 +1,9 @@
 function shallowCopy(obj){
-var ObjectCopy = [];
-for(var key in obj){
-ObjectCopy[key] = obj[key];
-}
-return ObjectCopy;
+  var ObjectCopy = [];
+  for(var key in obj) {
+    ObjectCopy[key] = obj[key];
+  }
+  return ObjectCopy;
 }
 
 
