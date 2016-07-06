@@ -4,6 +4,7 @@ function defineType(data){
 	return cutStr;
 }
 
+/*test*/
 var data = [1, 2, 3];
 var res = defineType(data);
 console.log (res);
