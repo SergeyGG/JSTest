@@ -1,14 +1,28 @@
-Web.STATION = "1-100";
-Web.SUN = "1-5+0";
-Web.HOUSE = "1-400ap";
+Power.PLANT = "plant";
+Power.SUN = "sun";
+Power.HOUSE = "house";
 
-function Web (STATION, SUN, HOUSE) {
-	var value = 0;
+function Power () {
+	function Plant (power) {
+		this.power = power;
+	} 
 
-	value += STATION;
-	value += SUN;
-	value -= HOUSE;
+	function Sun (power) {
+		this.power = power;
+	} 
 
-	return value;
+	function House (power) {
+		this.power = power;
+	} 
 }
 
+Power.prototype.calculateAllPower = function(element) {
+
+	var allPower = 0; 
+
+	if (element == Power.PLANT) allPower += plant.power; 
+	if (element == Power.SUN) allPower += sun.power;
+	if (element == Power.HOUSE) allPower -= house.power;
+
+	return allPower;
+}
