@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>iField</title>
-	<meta name="description" content="Field change color">
+	<title>MinesWeeper</title>
+	<meta name="description" content="MinesWeeper">
 	<meta name="author" content="SergeyGG">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
@@ -15,71 +15,10 @@
 
 <body>
 
-<script>
-function tableCreate(){
-    var body = document.body,
-        tbl  = document.createElement('table');
-    tbl.classList.add("table");
-    
-    for(var i = 0; i <= 10; i++){
-        var tr = tbl.insertRow();
-        for(var j = 0; j <= 10; j++){
-            var td = tr.insertCell();
-            td.classList.add("green");
-        }
-    }
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/controller.js"></script>
 
-    body.appendChild(tbl);
-}
-
-tableCreate();
-
-window.onload = function() {
-	var td = document.getElementsByTagName("td");
-	for (var i = 0; i < td.length; i++) {
-		td[i].onmousedown = changeColor;
-	}
-
-	function changeColor(event) {
-	var td = event.target;
-	td.classList.remove("green");
-	td.classList.add("white");
-	}
-
-	change.onclick = function replaceClass() {
-
-
-		var td = document.getElementsByTagName("td");
-		console.log (td);
-		for (var i = 0; i < td.length; i++) {
-			if (true) {}
-			td[i].classList.add("green");
-		}
-
-		//console.log (td.classList.contains("green"));
-		/*if (td.classList.contains("green")) {
-td.classList.remove("green");
-	td.classList.add("white");
-		} */
-		/*else {
-			td.classList.remove("white");
-	td.classList.add("green");
-		}*/
-	
-	
-
-}
-  
-};
-
-
-
-
-
-
-</script>
-
-<input type="button" id="change" value="Change!">
 
 </body> 
 </html>
